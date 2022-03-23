@@ -1,6 +1,6 @@
 import data.real.basic
 
--- proving that ∀ n ∈ ℕ, 1 ≤ 1.5^n
+-- proving that ∀ n ∈ ℕ, 1 ≤ 2^(2*n)
 -- a tactic
 -- tranforming this into a proof
 def my_tactic (n : ℕ) : (1 : ℝ) ≤ 2^(2*n) :=
@@ -24,7 +24,7 @@ have hmn : m * n = 2 * (m * k),
 show ∃ l, m * n = 2 * l,
   from ⟨_, hmn⟩
 
--- or using tactics
+-- tactic-style
 def even_prod_by_tactic :  ∀ m n : nat, even n → even (m * n) :=
 begin
   -- say m and n are natural numbers, and assume n=2*k
